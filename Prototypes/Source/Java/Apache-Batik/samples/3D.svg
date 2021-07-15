@@ -1,37 +1,4 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"
-"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-
-<!--
-
-   Licensed to the Apache Software Foundation (ASF) under one or more
-   contributor license agreements.  See the NOTICE file distributed with
-   this work for additional information regarding copyright ownership.
-   The ASF licenses this file to You under the Apache License, Version 2.0
-   (the "License"); you may not use this file except in compliance with
-   the License.  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-
--->
-<!-- ====================================================================== -->
-<!-- 3D demo                                                                -->
-<!--                                                                        -->
-<!-- @author tkormann@ilog.fr                                               -->
-<!-- @version $Id: 3D.svg 1733420 2016-03-03 07:41:59Z gadams $ -->
-<!-- ====================================================================== -->
-
-<svg xmlns="http://www.w3.org/2000/svg" 
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     id="body" width="640" height="480" viewBox="0 0 640 480">
-
-    <script type="text/ecmascript"><![CDATA[
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body" width="640" height="480" viewBox="0 0 640 480"><script type="text/ecmascript"><![CDATA[
 
         // constants
         var MAX_FOCAL_DISTANCE = 1100;
@@ -471,34 +438,4 @@
                 return points3d;
         }
 
-]]></script>
-
-<defs>
-        <linearGradient id="grad1">
-                <stop offset="0" style="stop-color:blue" />
-                <stop offset=".2" style="stop-color:red" />
-                <stop offset=".4" style="stop-color:yellow" />
-                <stop offset=".6" style="stop-color:green" />
-                <stop offset=".8" style="stop-color:cyan" />
-                <stop offset="1" style="stop-color:blue" />
-        </linearGradient>
-</defs>
-
-<rect x="0" y="10%" width="100%" height="80%" style="fill:black" />
-<rect x="0" y="0" width="100%" height="10%" style="fill:#004" />
-<rect x="0" y="90%" width="100%" height="10%" style="fill:#004" />
-
-<rect x="0" y="10%" width="100%" height="1" style="fill:url(#grad1)" />
-<rect x="0" y="90%" width="100%" height="1" style="fill:url(#grad1)" />
-<text x="50%" y="40" style="text-anchor:middle; font-family:Impact;font-size:36; fill:white;">Batik 3D</text>
-    <g id="container" onload="startAnimation(evt)">
-
-    </g>
-
-    <!-- ============================================================= -->
-    <!-- Batik sample mark                                             -->
-    <!-- ============================================================= -->
-    <use transform="translate(598,447)" width="27" height="28"
-         xlink:href="batikLogo.svg#Batik_Squiggle" />
-
-</svg>
+]]></script><defs><linearGradient id="grad1"><stop offset="0" style="stop-color:blue"/><stop offset=".2" style="stop-color:red"/><stop offset=".4" style="stop-color:yellow"/><stop offset=".6" style="stop-color:green"/><stop offset=".8" style="stop-color:cyan"/><stop offset="1" style="stop-color:blue"/></linearGradient></defs><rect width="100%" height="80%" x="0" y="10%" style="fill:#000"/><rect width="100%" height="10%" x="0" y="0" style="fill:#004"/><rect width="100%" height="10%" x="0" y="90%" style="fill:#004"/><rect width="100%" height="1" x="0" y="10%" style="fill:url(#grad1)"/><rect width="100%" height="1" x="0" y="90%" style="fill:url(#grad1)"/><text x="50%" y="40" style="text-anchor:middle;font-family:Impact;font-size:36;fill:#fff">Batik 3D</text><use width="27" height="28" transform="translate(598,447)" xlink:href="batikLogo.svg#Batik_Squiggle"/></svg>
