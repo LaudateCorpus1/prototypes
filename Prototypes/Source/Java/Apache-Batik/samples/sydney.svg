@@ -1,32 +1,4 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" 
-  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-
-
-<!--
-
-   Licensed to the Apache Software Foundation (ASF) under one or more
-   contributor license agreements.  See the NOTICE file distributed with
-   this work for additional information regarding copyright ownership.
-   The ASF licenses this file to You under the Apache License, Version 2.0
-   (the "License"); you may not use this file except in compliance with
-   the License.  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-
--->
-<svg width="655" height="600" viewBox="0 0 655 600"
-     xmlns="http://www.w3.org/2000/svg" 
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
-
-<script type="text/ecmascript">
-<![CDATA[
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="655" height="600" viewBox="0 0 655 600"><script type="text/ecmascript"><![CDATA[
 var svgns   = "http://www.w3.org/2000/svg";
 var xlinkns = "http://www.w3.org/1999/xlink";
 
@@ -156,51 +128,4 @@ function hideOverlay() {
   document.getElementById("overlay").setAttribute("visibility","hidden");
   actionTgt=null;
 }
- ]]></script>
-
-   <filter id="merge"  filterUnits="objectBoundingBox" >
-       <feMorphology operator="dilate" radius="10" in="SourceAlpha" />
-       <feGaussianBlur stdDeviation="4" /> 
-       <feOffset dx="3" dy="3"/>
-       <feComponentTransfer result="shadow">
-          <feFuncA type="linear" slope=".6" intercept="0" />
-       </feComponentTransfer>
-       <feComposite operator="over" in="SourceGraphic" in2="shadow"/>
-   </filter>
-
-   <rect fill="#88A" x="0%" y="0%" width="100%" height="100%"/>
-   <text x="302" y="47" font-size="24" fill="#448"
-        >Click and drag to move images</text>
-   <text x="300" y="45" font-size="24" fill="white"
-        >Click and drag to move images</text>
-   <rect fill="none" x="0%" y="0%" width="100%" height="100%"
-         pointer-events="fill"
-         onmousedown="dragScaleOff()"
-         onmouseup="dragScaleOff()"
-         onmousemove="dragScaleImgBg(evt)"/>
-
-   <g id="imgGroup" style="filter:url(#merge)" 
-             onmousedown="dragOn(evt)"
-             onmouseup="dragScaleOff()"
-             onmousemove="dragScaleImg(evt)"
-             onmouseover="showOverlay(evt)">
-
-      <image x="25" y="315" width="360" height="240"
-             xlink:href="tests/resources/images/operaSteps.jpg"/>
-   
-      <image x="50" y="40" width="200" height="300"
-             xlink:href="tests/resources/images/operaWalk.jpg"/>
-   
-      <image x="270" y="200" width="360" height="240"
-             xlink:href="tests/resources/images/operaBridge.jpg"/>
-   </g>
-
-   <g id="overlay" visibility="hidden" 
-      onmousedown="scaleOn(evt)"
-      onmouseup="dragScaleOff()"
-      onmousemove="dragScaleImg(evt)">
-      <path fill="darkgrey" stroke="white"
-            d="M0,0 h-20 l20,-20 z M-12,-3 l9-9 z M-6,-3 l3-3z"/>
-   </g>
-
-</svg>
+ ]]></script><filter id="merge" filterUnits="objectBoundingBox"><feMorphology in="SourceAlpha" operator="dilate" radius="10"/><feGaussianBlur stdDeviation="4"/><feOffset dx="3" dy="3"/><feComponentTransfer result="shadow"><feFuncA intercept="0" slope=".6" type="linear"/></feComponentTransfer><feComposite in="SourceGraphic" in2="shadow" operator="over"/></filter><rect width="100%" height="100%" x="0%" y="0%" fill="#88A"/><text x="302" y="47" fill="#448" font-size="24">Click and drag to move images</text><text x="300" y="45" fill="#fff" font-size="24">Click and drag to move images</text><rect width="100%" height="100%" x="0%" y="0%" fill="none" onmousedown="dragScaleOff()" onmousemove="dragScaleImgBg(evt)" onmouseup="dragScaleOff()" pointer-events="fill"/><g id="imgGroup" onmousedown="dragOn(evt)" onmousemove="dragScaleImg(evt)" onmouseover="showOverlay(evt)" onmouseup="dragScaleOff()" style="filter:url(#merge)"><image width="360" height="240" x="25" y="315" xlink:href="tests/resources/images/operaSteps.jpg"/><image width="200" height="300" x="50" y="40" xlink:href="tests/resources/images/operaWalk.jpg"/><image width="360" height="240" x="270" y="200" xlink:href="tests/resources/images/operaBridge.jpg"/></g><g id="overlay" onmousedown="scaleOn(evt)" onmousemove="dragScaleImg(evt)" onmouseup="dragScaleOff()" visibility="hidden"><path fill="#a9a9a9" stroke="#fff" d="M0,0 h-20 l20,-20 z M-12,-3 l9-9 z M-6,-3 l3-3z"/></g></svg>
